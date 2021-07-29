@@ -2,31 +2,30 @@ public class Main {
 
     public static void test() {
         Registrar registrar = new Registrar();
-        Student s1 = new Student(registrar , "Student 1");
-        Student s2 = new Student(registrar, "Student 2");
-        Student s3 = new Student(registrar, "Student 3");
-        Student s4 = new Student(registrar, "Student 4");
-        Class c = new Class();
+        MyObserver s1 = new Student(registrar , "Student 1");
+        MyObserver s2 = new Student(registrar, "Student 2");
+        MyObserver s3 = new Student(registrar, "Student 3");
+        MyObserver s4 = new Student(registrar, "Student 4");
+        MyObserver s5 = new Student(registrar, "Student 5");
+        Class c = new Class("CSCI 370");
 
         registrar.addListener(s1);
         registrar.addListener(s2);
         registrar.addListener(s3);
         registrar.addListener(s4);
+        registrar.addListener(s5);
+        registrar.removeListener(s5);
 
 
-
-        s1.addClass(c);
-        s2.addClass(c);
-        s3.addClass(c);
-        s4.addClass(c);
+        ((Student) s1).addClass(c);
+        ((Student) s2).addClass(c);
+        ((Student) s3).addClass(c);
+        ((Student) s4).addClass(c);
         if (!c.isFull) throw new AssertionError();
-        s1.dropClass(c);
+        ((Student) s1).dropClass(c);
         if (c.isFull) throw new AssertionError();
-        s4.addClass(c);
-        s1.addClass(c);
-
-
-
+        ((Student) s4).addClass(c);
+        ((Student) s1).addClass(c);
     }
 
     public static void main(String[] args) {
