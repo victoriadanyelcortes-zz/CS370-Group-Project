@@ -19,6 +19,12 @@ public class Main {
         s2.addClass(c);
         s3.addClass(c);
         s4.addClass(c);
+        if (!c.isFull) throw new AssertionError();
+        s1.dropClass(c);
+        if (c.isFull) throw new AssertionError();
+        s4.addClass(c);
+        s1.addClass(c);
+
 
 
     }
