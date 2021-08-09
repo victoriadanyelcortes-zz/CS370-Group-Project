@@ -1,6 +1,6 @@
 public class Main {
 
-    public static void test() {
+    public static void sample() {
         Registrar registrar = new Registrar();
         MyObserver s1 = new Student(registrar , "Student 1");
         MyObserver s2 = new Student(registrar, "Student 2");
@@ -30,7 +30,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        test();
+        sample();
 
     }
 }
