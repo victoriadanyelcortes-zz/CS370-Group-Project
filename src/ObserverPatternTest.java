@@ -14,6 +14,7 @@ class ObserverPatternTest {
         registrar.addListener(stud);
 
         // Assertion to make sure attaching observers works properly
+        // Attaching observers is needed to send notifications
         assertEquals(2, registrar.observers.size());
 
         // Assertion to ensure removing observers works properly

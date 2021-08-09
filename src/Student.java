@@ -1,4 +1,3 @@
-
 public class Student implements MyObserver {
     Registrar r;
     String name;
