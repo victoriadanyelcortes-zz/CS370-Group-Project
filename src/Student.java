@@ -2,6 +2,11 @@
 public class Student implements MyObserver {
     Registrar r;
     String name;
+    
+    public Student(String name) {
+        this.name = name;
+    }
+    
     public Student (Registrar r, String name) {
         this.r = r;
         this.name = name;
@@ -23,5 +28,9 @@ public class Student implements MyObserver {
     @Override
     public void full(Class c) {
         System.out.println(name + ":" + c.name + " is full!");
+    }
+    
+    public String getName() {
+        return name;
     }
 }
