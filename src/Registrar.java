@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Registrar implements MyObservable {
-    private final List<MyObserver> observers = new ArrayList<MyObserver>();
+    protected final List<MyObserver> observers = new ArrayList<MyObserver>();
 
     public Registrar() {}
 

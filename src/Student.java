@@ -17,11 +17,11 @@ public class Student implements MyObserver {
 
     @Override
     public void updateSeats(int seatsLeft, Class c) {
-        System.out.println(name + ": The number of seats left in" + c.name + " are: " + seatsLeft);
+        System.out.println(name + ": The number of seats left in " + c.name + " are: " + seatsLeft);
     }
 
     @Override
     public void full(Class c) {
-        System.out.println(name + ":" + c.name + " is now full!");
+        System.out.println(name + ":" + c.name + " is full!");
     }
 }

@@ -8,6 +8,7 @@ public class Main {
         MyObserver s4 = new Student(registrar, "Student 4");
         MyObserver s5 = new Student(registrar, "Student 5");
         Class c = new Class("CSCI 370");
+        Class cs = new Class("CSCI 331");
 
         registrar.addListener(s1);
         registrar.addListener(s2);
@@ -20,7 +21,7 @@ public class Main {
         ((Student) s1).addClass(c);
         ((Student) s2).addClass(c);
         ((Student) s3).addClass(c);
-        ((Student) s4).addClass(c);
+        ((Student)s4).addClass(c);
         if (!c.isFull) throw new AssertionError();
         ((Student) s1).dropClass(c);
         if (c.isFull) throw new AssertionError();
