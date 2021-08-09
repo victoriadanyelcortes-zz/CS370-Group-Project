@@ -39,6 +39,7 @@ public class Registrar implements MyObservable {
 
     @Override
     public void notif(int seats, Class c) {
+        // Updating each observer of the number of seats left in a class
         for (MyObserver obs : observers) {
             obs.updateSeats(seats, c);
         }
@@ -47,6 +48,7 @@ public class Registrar implements MyObservable {
 
     @Override
     public void notifyFull(Class c) {
+        // Updating each observer that a class is full
         for (MyObserver obs : observers) {
             obs.full(c);
         }

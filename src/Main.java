@@ -1,5 +1,14 @@
+
+/*
+This is the main file for the observer pattern.
+All code for this pattern written by Victoria Cortes.
+ */
+
 public class Main {
 
+    // A simple method to demonstrate the class registration
+    // notifications sent from registrar to student
+    // using the observer pattern
     public static void sample() {
         Registrar registrar = new Registrar();
         MyObserver s1 = new Student(registrar , "Student 1");
