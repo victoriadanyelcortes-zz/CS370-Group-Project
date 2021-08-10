@@ -2,6 +2,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 // The WaitList class implements the Collection interface which contains the createIterator method
+// This class uses a queue to store the collection of students
 public class WaitList implements Collection{
     private Queue<Student> WaitList = new LinkedList<Student>();
     private int maxCapacity = 10;
