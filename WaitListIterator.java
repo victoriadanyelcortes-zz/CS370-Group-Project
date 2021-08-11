@@ -5,7 +5,7 @@ import java.util.Queue;
 public class WaitListIterator implements Iterator{
     private Queue<Student> WaitList = new LinkedList<Student>();
     
-    // The WaitListIterator takes in a queue of students in the contructor  
+    // The WaitListIterator takes in a queue of students in the constructor  
     public WaitListIterator(Queue<Student> WaitList){
         this.WaitList = WaitList;
     }
