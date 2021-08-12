@@ -10,14 +10,13 @@ public class Main {
     // notifications sent from registrar to student
     // using the observer pattern
     public static void sample() {
-        Registrar registrar = new Registrar();
+        Registrar registrar = Registrar.getInstance();
         MyObserver s1 = new Student(registrar , "Student 1");
         MyObserver s2 = new Student(registrar, "Student 2");
         MyObserver s3 = new Student(registrar, "Student 3");
         MyObserver s4 = new Student(registrar, "Student 4");
         MyObserver s5 = new Student(registrar, "Student 5");
         Class c = new Class("CSCI 370");
-        Class cs = new Class("CSCI 331");
 
         registrar.addListener(s1);
         registrar.addListener(s2);

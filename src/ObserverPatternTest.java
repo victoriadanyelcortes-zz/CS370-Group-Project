@@ -7,7 +7,7 @@ class ObserverPatternTest {
     // Testing the classes Student and Registrar as Observer and Observable Respectively
     @Test
     public void test() {
-        Registrar registrar = new Registrar();
+        Registrar registrar = Registrar.getInstance();
         MyObserver student = new Student(registrar,"Notso V. Studious");
         MyObserver stud = new Student(registrar, "Studious Studente");
         registrar.addListener(student);

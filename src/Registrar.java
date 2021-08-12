@@ -2,10 +2,26 @@ import java.io.ObjectStreamException;
 import java.util.ArrayList;
 import java.util.List;
 
+// Observer Pattern by Victoria Cortes, Singleton by Steven Wen
+
 public class Registrar implements MyObservable {
     protected final List<MyObserver> observers = new ArrayList<MyObserver>();
 
-    public Registrar() {}
+    //public Registrar() {}
+
+    private static Registrar single_instance = null;
+
+    //method to create Registrar object
+    private Registrar(){};
+
+    public static Registrar getInstance() {
+
+        if(single_instance == null){
+            single_instance = new Registrar();
+        }
+
+        return single_instance;
+    }
 
     public void addToClass(Student s, Class c) {
         if (c.classRoster.size() < c.classCap) {
